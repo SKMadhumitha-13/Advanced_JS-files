@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //classes in js
+        class car{
+            constructor (name, brand, color){
+                this.name = name;
+                this.brand = brand
+                this.color = color
+            }
+            printDetails(){
+                console.log(`${this.name} is belongs to ${this.brand}`)
+            }
+        }
+        let mycar1 = new car("Thar", "Mahindra", "Black")
+            console.log(mycar1);    
+            mycar1.printDetails();
+    </script>
+    
+</body>
+</html>

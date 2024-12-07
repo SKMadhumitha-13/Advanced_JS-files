@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let myAsync = async(age) =>{
+        if (age > 18) {
+            return "eligible"
+        }else{
+            throw new Error ("Not Eligible")
+        }
+    }
+    let consumeAsync = async () => {
+        try{
+            let result = await myAsync(90)
+            let result1 = await myAsync(30)
+            console.log(result,result1);
+        }catch (error) {
+            console.log (error);
+        }
+    }
+    consumeAsync()
+</script>
+</body>
+</html>

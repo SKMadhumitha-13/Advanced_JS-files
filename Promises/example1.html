@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //console.log("starts");
+
+        let myPromise = new Promise((resolve,reject)=>{
+            let age = 2
+            setTimeout(() => {
+                if (age >= 18){
+                        resolve("Eligible to Vote")
+                }
+                else{
+                    reject("Not eligible to Vote")
+                }
+            },2000)
+        })
+        //console.log(myPromises);
+        myPromise.then((data) => {
+            console.log(data);
+        }).catch((error) => console.log(error))
+        .finally(() => console.log("Promise is Settled"))
+
+        console.log("ends")
+    </script>
+</body>
+</html>

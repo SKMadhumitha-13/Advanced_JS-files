@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+        //template literals
+            // let a = 100
+            // let b = 200
+            // console.log ("the sum of "+a+" and "+b+ " is " +(a+b));
+            // console.log(`the sum of $(a) and $(b) is $(a+b)`);
+
+        //default parameters
+            // const sum = (a=0,b=0) =>{
+            //     console.log(a+b);
+            // }
+            // sum(10,20)    //30
+            // sum(5)       //5
+            // sum()       //0
+            // sum(undefined,undefined)   //0
+            // sum(true,true)      //2
+
+        //rest parameter
+            // function add(...a){
+            //     console.log(a);    //every arguments are collected in an array
+            //     return a.reduce((acc,ele)=>acc + ele)
+            // }
+            //     console.log(add(1,2,3,4,5,6))    ///21
+            //     console.log(add(10,20,30))    //60
+           
+        //spread operator
+            // let arr =[1,2,3,4]
+            // let str = "abcd"
+            // let obj ={name:"Rohit" , age:24}
+
+            //     //console.log(...arr);     //1 2 3 4
+            //     //console.log(...str);    //a b c d
+            //     //console.log(...obj);   //TypeError: Spread syntax requires ...iterable Object.
+
+            // let result = {...arr};   //shallow copy
+            // console.log(arr == result);
+            // let result1 = [...obj1]
+            // console.log(result1);  //Typeerror
+        let num1 = [2,4,6]
+        let num2 = [1,3,5]
+
+        let result =[...num1,...num2]
+        console.log(result);    //[2,4,6,1,3,5]
+
+        let student1 = {name:"Anshu", age:20, address:"Kolkata"}
+        let student2 = {name:"Aashish", age:22, gender:"Male"}
+
+        let result1 = {...student1,...student2}
+        console.log(result1);    //{name:"Aashish",age:22,gender:"Male"}
+
+        //destructuring
+        let arr =[1,2,3,4]
+        let arr1= [5,6,7]
+
+        let [x,y,...z] =[...arr,...arr1]
+        consol.log(x,y)   //1,2
+        console.log(z)   //[3,4,5,6,7]
+        }
+    </script>
+</body>
+</html>

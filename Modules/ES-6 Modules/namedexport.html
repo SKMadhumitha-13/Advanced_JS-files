@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">                                 // type "module" attribute is mandatory to give in the script
+        import {add as addition,mul} from "./first.js"    // this is known as namedexport..
+        let x=20
+        let y= 30
+        let sum = addition(x,y)
+        console.log(sum);        //50
+        let prod =mul (x,y)
+        console.log(prod);      //600
+    
+    </script>
+</body>
+</html>
